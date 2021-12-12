@@ -12,7 +12,7 @@ const Template4: NextPage<TemplateProps> = ({ collection }) => {
   const renderNFT = (item: NftCardProps) => <NftCard2 {...item} key={item?.title} withoutHover />
 
   return (
-    <main className="flex flex-col w-full flex-1 md:px-20 px-5">
+    <main className="flex flex-col w-full flex-1 md:px-20 px-5 z-10">
       <Image src={collection.coverImageURL} alt="collection cover image" height={540} width={'100%'} objectFit='cover' />
       <div className="mt-10">
         {texts.map((l: string, i: number) => <p key={i} className='font-bold text-xl'>{l}</p>)}

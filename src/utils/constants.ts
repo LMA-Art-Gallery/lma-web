@@ -27,12 +27,12 @@ export const Templates = [
 ]
 
 export const Pages = [
-  { _id: 'Justin', name: 'Justin', site: 'https://example.com/pages/justin' },
-  { _id: 'Amber', name: 'Amber', site: 'https://example.com/pages/amber' },
-  { _id: 'Kat', name: 'Kat', site: 'https://example.com/pages/kat' },
-  { _id: 'Andrew', name: 'Andrew', site: 'https://example.com/pages/andrew' },
-  { _id: 'Steph', name: 'Steph', site: 'https://example.com/pages/steph' },
-  { _id: 'Michael', name: 'Michael', site: 'https://example.com/pages/michael' },
+  { _id: 'LMA', name: 'LMA', site: `/templates/1/preview`, imageURL: '/images/template1/001.jpg', collection: 0 },
+  { _id: 'Amber', name: 'Amber', site: '/templates/2/preview', imageURL: '/images/template2/001.jpg', collection: 1 },
+  { _id: 'Justin', name: 'Justin', site: '/templates/3/preview', imageURL: '/images/template3/001.jpg', collection: 2 },
+  { _id: 'Andrew', name: 'Andrew', site: '/templates/4/preview', imageURL: '/images/template4/001.jpg', collection: 3 },
+  { _id: 'Steph', name: 'Steph', site: '/templates/5/preview', imageURL: '/images/template5/001.jpg', collection: 4 },
+  { _id: 'Michael', name: 'Michael', site: '/templates/1/preview', imageURL: '/images/template1/001.jpg', collection: 0 },
 ]
 
 export const Offers = [

@@ -58,7 +58,7 @@ const Header: NextPage<any> = ({ headerStyle, textStyle, buttonStyle}) => {
   return (
     <>
     <ErrorHeader status={accError} />
-    <div className={`flex flex-row flex-wrap items-center justify-between w-full md:px-20 px-5 py-10 text-center ${headerStyle}`}>
+      <div className={`flex flex-row flex-wrap items-center justify-between w-full md:px-20 px-5 py-10 text-center z-50 ${headerStyle}`}>
       <Link href="/" passHref>
         <a className="flex flex-row items-center">
           <Image src="/logo.png" alt="LMA Logo" width={20} height={40} />
@@ -67,12 +67,15 @@ const Header: NextPage<any> = ({ headerStyle, textStyle, buttonStyle}) => {
       </Link>
 
       <div className="flex flex-row items-center text-base">
+        <Link href="/gallery" passHref>
+          <a className={`mr-10 hover:text-primary ${textStyle}`}>{t('Gallery')}</a>
+        </Link>
         <Link href="/templates" passHref>
           <a className={`mr-10 hover:text-primary ${textStyle}`}>{t('Sell Your Art')}</a>
         </Link>
-        <Link href="/about" passHref>
+        {/* <Link href="/about" passHref>
           <a className={`mr-10 hover:text-primary ${textStyle}`}>{t('About Us')}</a>
-        </Link>
+        </Link> */}
         {account ? renderUserName() : <IconButton title={t('Connect')} handlePress={toggleConnect} style={buttonStyle} />}
         
       </div>

@@ -10,6 +10,7 @@
   },
   "Header": {
     "title": "Art Gallery",
+    "Gallery": "Gallery",
     "Sell Your Art": "Sell Your Art",
     "About Us": "About Us",
     "Connect": "Connect",
@@ -41,6 +42,12 @@
   "Templates": {
     "title_1": "Pick the template",
     "title_2": "you love",
+    "Start with": "Start with {title}",
+    "Preview": "Preview",
+    "About": "About"
+  },
+  "Gallery": {
+    "title_1": "Gallery",
     "Start with": "Start with {title}",
     "Preview": "Preview",
     "About": "About"
