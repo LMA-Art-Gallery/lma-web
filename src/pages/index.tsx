@@ -8,25 +8,9 @@ import Header from '../components/Header'
 import LatestPageListItem, { LatestPageListItemProps } from '../components/LatestPageListIitem';
 import StepGuide from '../components/StepGuide';
 import TemplateCard, { TemplateCardProps } from '../components/TemplateCard';
-import Constants, { Templates } from '../utils/constants';
+import Constants, { Pages, Templates } from '../utils/constants';
 
-const Pages = [
-  { _id: 'Justin', name: 'Justin', site: 'https://example.com/pages/justin' },
-  { _id: 'Amber', name: 'Amber', site: 'https://example.com/pages/amber' },
-  { _id: 'Kat', name: 'Kat', site: 'https://example.com/pages/kat' },
-  { _id: 'Andrew', name: 'Andrew', site: 'https://example.com/pages/andrew' },
-  { _id: 'Steph', name: 'Steph', site: 'https://example.com/pages/steph' },
-  { _id: 'Michael', name: 'Michael', site: 'https://example.com/pages/michael' },
-]
 
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  const localeData = await import(`../utils/locales/${locale}.json`)
-  return {
-    props: {
-      messages: JSON.parse(JSON.stringify(localeData))
-    }
-  };
-}
 
 const Home: NextPage = () => {
   const t = useTranslations('Home');
@@ -41,16 +25,16 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center ">
-        <p className="font-bold font-sans text-l tracking-wider pt-20">artist label marketplace</p>
+        <p className="font-bold font-sans text-l tracking-wider pt-20">{t("artist label marketplace")}</p>
         <h1 className="font-extrabold font-sans text-5xl tracking-wider leading-normal">
-          Create your own
+          {t("Create your own")}
         </h1>
         <p className="font-extrabold font-sans text-5xl tracking-wider leading-normal">
-          individual NFT marketplace.
+          {t("individual NFT marketplace")}
         </p>
         <button className="flex flex-row font-bold border-1 bg-black p-2 hover:text-black hover:bg-white items-center justify-center mt-5 mb-10 text-white w-60">
           <Link href="/templates" passHref>
-            <a>Start Now</a>
+            <a>{t("Start Now")}</a>
           </Link>
         </button>
         <Image src="https://picsum.photos/840/525" alt="main photo" height={525} width={840} />
@@ -90,7 +74,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="w-full pt-20 pb-10">
-          <h2 className="text-right font-extrabold font-sans text-5xl pb-10">Your Artists</h2>
+          <h2 className="text-right font-extrabold font-sans text-5xl pb-10">{t("Your Artists")}</h2>
           <div className="w-full divide-y border-t border-b">
             {Pages.map(renderLatestPage)}
           </div>
@@ -100,7 +84,6 @@ const Home: NextPage = () => {
 
       <Footer />
     </div>
-
   )
 }
 

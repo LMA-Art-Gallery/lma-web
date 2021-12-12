@@ -52,7 +52,7 @@ export const useAccount = () => {
         try {
           await provider.request({
             method: 'wallet_switchEthereumChain',
-            params: [{chainId: Harmony.chainID}],
+            params: [{chainId: `0x${Harmony.chainID.toString(16)}`}],
           })
         } catch (switchError: any) {
           if (switchError.code === 4902) {
@@ -60,7 +60,7 @@ export const useAccount = () => {
               method: 'wallet_addEthereumChain',
               params: [
                 {
-                  chainId: Harmony.chainID,
+                  chainId: `0x${Harmony.chainID.toString(16)}`,
                   chainName: Harmony.chainName,
                   nativeCurrency: {
                     name: Harmony.token,

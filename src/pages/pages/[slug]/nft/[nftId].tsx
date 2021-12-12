@@ -1,7 +1,6 @@
 import type { GetServerSideProps, NextPage } from 'next'
 import Link from 'next/link';
 
-
 interface PageNftProps {
   slug: string
   nftId: string
@@ -21,7 +20,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 const PageNftDetail: NextPage<PageNftProps> = ({ slug, nftId }) => {
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-primaryLigthen">
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <h1 className="text-6xl font-bold">
           Id: {' '}

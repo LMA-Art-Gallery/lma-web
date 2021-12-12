@@ -16,7 +16,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 const PageDetail: NextPage<PageDetailProps> = ({ slug }) => {
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-primaryLigthen">
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <h1 className="text-6xl font-bold">
           Id: {' '}

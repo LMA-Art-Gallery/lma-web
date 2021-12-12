@@ -7,16 +7,6 @@ import SectionHeader from '../components/SectionHeader';
 import TemplateCard, { TemplateCardProps } from '../components/TemplateCard';
 import Footer from '../components/Footer';
 
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  const localeData = await import(`../utils/locales/${locale}.json`)
-  return {
-    props: {
-      messages: JSON.parse(JSON.stringify(localeData))
-    }
-  };
-}
-
-
 
 const Template: NextPage = () => {
   const t = useTranslations('Templates');
@@ -24,7 +14,7 @@ const Template: NextPage = () => {
   const renderTemplate = (item: TemplateCardProps) => <TemplateCard {...item} key={item?.title} />
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-primaryLigthen">
       <Head>
         <title>{t('title_1')} - {Constants.appName}</title>
       </Head>

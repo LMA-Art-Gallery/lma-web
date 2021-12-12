@@ -1,10 +1,15 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import NextApp, {AppContext, AppProps } from 'next/app'
 import 'tailwindcss/tailwind.css'
-import { NextIntlProvider } from 'next-intl';
+import { NextIntlProvider, IntlMessages } from 'next-intl';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <NextIntlProvider messages={pageProps.messages} formats={{
+type Props = AppProps & {
+  messages: IntlMessages;
+};
+
+
+function MyApp({ Component, messages, pageProps }: Props) {
+  return <NextIntlProvider messages={{...messages, ...pageProps?.messages}} formats={{
     dateTime: {
       short: {
         day: 'numeric',
@@ -16,5 +21,16 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Component {...pageProps} />
   </NextIntlProvider>
 }
+
+
+MyApp.getInitialProps = async function getInitialProps(ctx: AppContext) {
+  const localeData = await import(`../utils/locales/${ctx?.router?.locale || 'en'}.json`)
+
+  return {
+    ...(await NextApp.getInitialProps(ctx)),
+    messages: JSON.parse(JSON.stringify(localeData))
+  };
+}
+
 
 export default MyApp

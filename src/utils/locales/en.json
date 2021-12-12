@@ -1,7 +1,12 @@
 {
   "Home": {
     "title": "Home",
-    "Explore ALL templates": "EXPLORE ALL TEMPLATES"
+    "Explore ALL templates": "EXPLORE ALL TEMPLATES",
+    "Your Artists": "Your Artists",
+    "artist label marketplace":"artist label marketplace",
+    "Create your own": "Create your own",
+    "individual NFT marketplace": "individual NFT marketplace.",
+    "Start Now": "Start Now"
   },
   "Header": {
     "title": "Art Gallery",
@@ -14,7 +19,11 @@
     "disclaimer_1": "We do not own your private keys and cannot access your funds without your confirmation",
     "disclaimer_2_1": "You need to add ONE Harmony Network on Metamask, please follow our ",
     "disclaimer_2_2": "documentation",
-    "disclaimer_2_3": ", using other networks will result in permanent loss"
+    "disclaimer_2_3": ", using other networks will result in permanent loss",
+    "Profile": "Profile",
+    "Analytics": "Analytics",
+    "My Artist Page": "My Artist Page",
+    "My Collections": "My Collections"
   },
   "Footer": {
     "description": "LMA-ART-GALLERY was the first Art NFT platform on Harmony Network launched in 2020. After an amazing year the platform offers now to new artists page collection creation, artist brand label, dedicated page/ brand, and dedicated NFT marketplace.",
@@ -33,6 +42,60 @@
     "title_1": "Pick the template",
     "title_2": "you love",
     "Start with": "Start with {title}",
-    "Preview": "Preview"
+    "Preview": "Preview",
+    "About": "About"
+  },
+  "TemplatesCreate": {
+    "title_1": "Marketplace Details",
+    "Cancel": "Cancel",
+    "Create and Proceed to the Payment": "Create and Proceed to the Payment",
+    "Brand Artist Name": "Brand Artist Name",
+    "Enter Name": "Enter Name",
+    "Description": "Description",
+    "What is this marketplace about?": "What is this marketplace about?",
+    "Custom URL Link": "Custom URL Link",
+    "Your favorite slug":"Your favorite slug",
+    "Tags": "Tags",
+    "What is the marketplace related to?": "What is the marketplace related to?",
+    "Marketplace availability": "Marketplace availability"
+  },
+  "SettingsMint": {
+    "title_1": "Add your work",
+    "Cancel": "Cancel",
+    "Create": "Create"
+  },
+  "SettingsStats": {
+    "title_1": "Analytics",
+    "NFT minted": "NFT minted",
+    "NFT owned": "NFT owned",
+    "NFT sold": "NFT sold",
+    "Earnings": "Earnings"
+  },
+  "SettingsProfile": {
+    "title_1": "Profile",
+    "title_2": "Social",
+    "Profile Image": "Profile Image",
+    "Artist Name": "Artist's Name",
+    "Description": "Description",
+    "Member Since": "Member Since",
+    "Website": "Website",
+    "Twitter": "Twitter",
+    "Instagram": "Instagram"
+  },
+  "User": {
+    "Your Artists": "Your Artists",
+    "Offer": "Offer",
+    "Create new collection": "Create new collection",
+    "Create new art": "Create new art",
+    "My Collections": "My Collections",
+    "Add Work": "Add Work"
+  },
+  "Offer": {
+    "DECLINE": "DECLINE",
+    "ACCEPT": "ACCEPT"
+  },
+  "TemplatesPreview": {
+    "Description": "Description:",
+    "View Details": "View Details"
   }
 }
