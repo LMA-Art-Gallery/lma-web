@@ -33,6 +33,7 @@ export const TextInput: NextPage<TextInputProps> = ({ label, placeholder, type, 
                     block
                     w-full
                     px-0.5
+                    bg-transparent
                     border-0 border-b-2 border-gray-200
                     focus:ring-0 focus:border-primary
                     ${inputStyle}
@@ -54,6 +55,7 @@ export const RightInput: NextPage<TextInputProps> = ({ label, placeholder, type,
                     peer
                     mt-0
                     w-full
+                    bg-transparent
                     border-0
                     px-0.5
                     focus:ring-0 focus:border-primary
